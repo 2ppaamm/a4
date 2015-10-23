@@ -53,13 +53,6 @@ blockquote small {
 	font-style: italic;
 }
 
-.clearfix:after {
-   content: " "; /* Older browser do not support empty content */
-   visibility: hidden;
-   display: block;
-   height: 0;
-   clear: both;
-}
 
 
 div.wrapper {
@@ -144,6 +137,7 @@ nav #navright li {
 #contact {
 	color:#444444;
 	text-align: left;
+	overflow: auto;
 }
 
 #contact h2 {
@@ -240,6 +234,7 @@ footer {
 	text-align: left;
 	padding-right:1em;
 	overflow: auto;
+	border:ridge;
 }
 
 #blog aside ul {
@@ -261,12 +256,14 @@ footer {
 	display: inline-block; 	
 	width: 75%;
 	vertical-align: top;
+	padding:1em;
 }
 
 #blog article {
 	display: block;
 	width:100%;
-	overflow: auto; 
+	overflow: auto;
+	padding:0.5em; 
 }
 
 #blog div.text {
@@ -284,6 +281,7 @@ footer {
 }
 
 footer{
+	clear: left;
 	text-align: center;
 	padding: 2em;
 }
