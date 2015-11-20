@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/main.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.4.0/fullcalendar.min.css" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:600|Montserrat|Ubuntu' rel='stylesheet' type='text/css'>
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+	<title>Dashboard</title>
+  </head>
+  <body>
+  <section id='header'>
+    <nav id="navbar">
+    	<ul>
+    		<div id="navleft">
+	    		<li><a href="index.html">All Gifted</a></li>
+    			<li><a href="#product">Products</a></li>
+    			<li><a href="#service">Services</a></li>
+    			<li><a href="#contact">Contact Us</a></li>
+    		</div>
+    		<div id="navright">
+    		<li><a href="article.html">Hello Blood</a></li>
+    		</div>
+    	</ul>
+    </nav>
+    </section>
+    <section id='content'>
+	    <div class="container">
+			<div class="col1 dashboard-stat">
+				<div class="visual">
+					<i class="fa fa-line-chart"></i>
+				</div>
+				<div class="details">
+					<div class="number">
+						 120
+					</div>
+					<div class="desc">
+						 Total
+					</div>
+				</div>
+				<a class="more" href="javascript:;">
+					<i class="fa fa-arrow-circle-o-right"></i>
+				</a>
+			</div>
+			<div class="col2 dashboard-stat">
+				<div class="visual">
+					<i class="fa fa-exclamation"></i>
+				</div>
+				<div class="details">
+					<div class="number">
+						 21
+					</div>
+					<div class="desc">
+						 Below Target
+					</div>
+				</div>
+				<a class="more" href="javascript:;">
+					<i class="fa fa-arrow-circle-o-right"></i>
+				</a>
+			</div>
+			<div class="col3 dashboard-stat">
+				<div class="visual">
+					<i class="fa fa-check"></i>
+					</div>
+					<div class="desc">
+				</div>
+				<div class="details">
+					<div class="number">
+					 	89
+					</div>
+					<div class="desc">
+						 On Target
+					</div>
+				</div>
+				<a class="more" href="javascript:;">
+					<i class="fa fa-arrow-circle-o-right"></i>
+				</a>
+			</div>
+			<div class="col4 dashboard-stat">
+				<div class="visual">
+					<i class="fa fa-star"></i>
+				</div>
+				<div class="details">
+					<div class="number">
+						 10
+					</div>
+					<div class="desc">
+						 Excel
+					</div>
+				</div>
+				<a class="more" href="javascript:;">
+					<i class="fa fa-arrow-circle-o-right"></i>
+				</a>
+			</div>
+    	</div>
+    	<div class="container">
+    		<div class="bigportlet" id='improvementChart'>
+    		</div>
+    	</div>
+	</section>
+    <section id="product">
+ 			<div class="portlet calendar">
+				<div class="portlet-body">
+					<div id="calendar">
+					</div>
+				</div>
+			</div>
+			<div class="portlet" id="knowledgeChart"></div>
+   </section>
+    <footer>
+    	All Gifted all rights reserved 2015
+    </footer>
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.4.0/fullcalendar.js">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"></script>
+  </body>
+</html>

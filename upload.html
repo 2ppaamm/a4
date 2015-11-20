@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Create a Photo with caption</title>
+    <link href="css/main.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+</head>
+<body>
+  <section id='header'>
+    <nav id="navbar">
+        <ul class="clearfix">
+            <div id="navleft">
+            <li><a href="index.html">All Gifted</a></li>
+            <li><a href="index.html#product">Products</a></li>
+            <li><a href="index.html#service">Services</a></li>
+            <li><a href="index.html#contact">Contact Us</a></li>
+            </div>
+            <div id="navright">
+            <li><a href="upload.html">Frame Photo</a></li>
+            <li><a href="article.html">Research</a></li>
+            </div>
+        </ul>
+    </nav>
+  </section>
+  <section id="photoframe" class="container">
+    <h1>Frame a photo red</h1>
+      <div>
+      <form action="" method="post" enctype="multipart/form-data"><br />
+        <label for="fileToUpload">Select a picture: </label>
+        <input type="file" name="fileToUpload" id="fileToUpload"><br />
+        <label for="line1">Add a caption:</label>
+        <input type="text" id="line1"><br />
+        <canvas width="730" height="520" id="canvas1"></canvas><br />
+        <br>
+      </form>
+        <button id='clear'>Clear Photo Frame</button>
+      </div>
+
+      <img id="blah" alt="your image" height="100%" style="display:none"/>
+  </section>
+
+<!-- javascript -->
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="js/jcanvas.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -8,17 +8,23 @@
   </head>
   <body>
   <section id='header'>
-  	<div class='wrapper'>
-	  	<img class='splash' src="img/school.jpg" width='100%' alt="school"\> 
-		<blockquote>"Education is the most powerful weapon which you can use to change the world."<small>~ Nelson Mendela</small></blockquote>    	
-  	</div>
     <nav id="navbar">
-    	<ul class="clearfix">
+    	<ul>
     		<div id="navleft">
-    		<li><a href="index.html">All Gifted</a></li>
-    		<li><a href="#product">Products</a></li>
-    		<li><a href="#service">Services</a></li>
-    		<li><a href="#contact">Contact Us</a></li>
+	    		<li><a href="index.html">All Gifted</a></li>
+	    		<li><a href="#product">Products</a></li>
+	    		<li><a href="#service">Services</a></li>
+	    		<li><a href="#contact">Contact Us</a></li>
+	   			<form action="" class="login">
+	    			<li>
+	    				<label for="loginemail">Email</label>
+						<input type="email" id="loginemail" name="email"/>
+	  		            <span class="error"></span>
+						<label for="password">Password</label>
+						<input type="password" id="password"/>
+						<button type="submit">Login</button>					
+					</li>
+				</form>
     		</div>
     		<div id="navright">
     		<li><a href="article.html">Research</a></li>
@@ -28,10 +34,13 @@
 
     </section>
     <section id="product">
+  	<div class='wrapper'>
+	  	<img class='splash' src="img/school.jpg" width='100%' alt="school"\> 
+		<blockquote>"Education is the most powerful weapon which you can use to change the world."<small>~ Nelson Mendela</small></blockquote>    	
+  	</div>
 	    <div class="wrapper">
 	    	<h1>Our <span>Innovations</span><small>Technology-driven Pedagogy</small></h1>
 		    <div class="product_group">
-			</div>
 		       	<div class="product">
 					<h3>Adaptive Numeracy</h3>
 					<p>Our patented process relieves teachers from the mandane tasks of administration and material preparation.	</p>		   	
@@ -61,7 +70,7 @@
     <section id="contact">
     	<div class="tranback"></div>
     	<div class="wrapper clearfix">
-    		<h1>Get In Touch <small>Singapore Pedagogy, American Technology, Aussie Spirit</small></h1>
+    		<h1>Get In Touch <small>Singaporean Pedagogy, American Technology, Aussie Spirit</small></h1>
     		<aside>
     			<h2>Contact Details</h2>
 				<p>This is the story of our lives</p>
@@ -73,8 +82,8 @@
 						<label for="name">Your name</label> 
 							<input type="text" id="name" name="name">
 						<label for="email">Email
+  		            		<span class="error"></span>							
 							<input type="email" id="email" name="email">
-						
 						<label for="date">Requested meeting date
 							<input type="date" id="date" name="date">
 						<p>Establishment</p>
@@ -93,26 +102,38 @@
 					</fieldset>
 					<fieldset id="info_required">
 						<legend>Product</legend>						
-						<p>What product/service are you looking for?</p>
-							<input name="purpose" list="purpose">
-							<datalist id="purpose" name="purpose">
+          				<div class="element">
+ 			           		<label for="subject">What product/service are you looking for?</label><br>
+            				<select name="subject" id="subject">
+								<option selected>Select one...</option>
+								<option value="math">Adaptive Math Program</option>
+								<option value="read">K-12 Reading Program</option>
+								<option value="todd">Toddler Reading Program</option>
+								<option value="lms">App-based Learning Management System</option>
+								<option value="others">Others</option>
+            				</select>
+            				<span><div class="msg"></div></span>
+          				</div>
+						<div id="selectlevel">
+							<p>For which levels?</p>
+							<input name="level" list="level">
+							<datalist id="level" name="level">
 								<label>Or select from the list</label>
 								<select name="filling">
 									<option selected>Select one...</option>
-									<option value="math">Adaptive Math Program</option>
-									<option value="read">K-12 Reading Program</option>
-									<option value="todd">Toddler Reading Program</option>
-									<option value="lms">App-based Learning Management System</option>
+									<option value="primary">Primary</option>
+									<option value="secondary">Secondary</option>
+									<option value="prisec">Primary and Secondary</option>
+									<option value="tertiary">Tertiarytem</option>
 									<option value="others">Others</option>
 								</select>
 							</datalist>
-							<label>
-							</label>
+						</div>
 						<label>Remarks:<br/>
 							<textarea id="comments" name="comments" placeholder="Any additional remarks for us?"></textarea>
 						</label>
 					</fieldset>
-															<button type="submit">Submit</button>
+					<button type="submit">Submit</button>
 
 				</form>
     		</div>
@@ -121,5 +142,7 @@
     <footer>
     	All Gifted all rights reserved 2015
     </footer>
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="js/main.js"></script>
   </body>
 </html>
