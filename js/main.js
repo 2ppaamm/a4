@@ -97,7 +97,11 @@ $(document).ready(function(){
 
 // upload image through canvas
 	$('#fileToUpload').change(function(){
-//		$('#blah')[0].src = window.URL.createObjectURL(this.files[0]);
+        var fileExtension = ['jpeg', 'jpg', 'png', 'gif', 'bmp'];
+        if ($.inArray($(this).val().split('.').pop().toLowerCase(), fileExtension) == -1) {
+            alert("Only formats are allowed : "+fileExtension.join(', '));
+        }
+        //		$('#blah')[0].src = window.URL.createObjectURL(this.files[0]);
 		$('#canvas1').drawRect({
 			name: 'box',
 			fillStyle: '#960000',
