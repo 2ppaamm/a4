@@ -82,8 +82,13 @@ $(document).ready(function(){
 	 });
 
 	$('article .text p').mouseover(function(){
-		$(this).css({backgroundColor:'lightgrey', fontColor:"white"});
+		$(this).css({backgroundColor:'grey', color:"white"});
 	});
+
+	$('article img').click(function(){
+		$(this).hide(1000).show(4000);
+	});
+
 
 // clear canvas
 	$('#clear').click(function(){
