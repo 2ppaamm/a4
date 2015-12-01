@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Teacher's Page</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="css/dashboard.css">
+
     <link href="css/main.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.4.0/fullcalendar.min.css" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:600|Montserrat|Ubuntu' rel='stylesheet' type='text/css'>
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
 	<title>Dashboard</title>
   </head>
   <body>
   <section id='header'>
-    <nav id="navbar">
+    <div id="navbar">
     	<ul>
     		<div id="navleft">
 	    		<li><a href="index.html">All Gifted</a></li>
@@ -22,7 +29,20 @@
     		<li><a href="article.html">Hello Blood</a></li>
     		</div>
     	</ul>
-    </nav>
+    </div>
+        	<header data-role="header" data-theme="b" data-position="fixed">
+    		<h1>Dashboard</h1>
+        	<nav data-role="navbar">
+                <ul>
+                    <li><a href="#home" class="ui-btn-active">Home</a></li>
+                    <li><a href="#">Student Management</a></li>
+                    <li><a href="#oranges">Course Management</a></li>
+                    <li><a href="#">Configuration</a></li>
+                    <li><a href="#">Administration</a></li>
+                </ul>
+            </nav>
+    	</header>
+
     </section>
     <section id='content'>
 	    <div class="container">

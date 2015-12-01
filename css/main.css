@@ -13,7 +13,6 @@ body {
 
 h1,h2,h3,h4 {
 	text-align: center;
-	font-family: 'Montserrat', sans-serif;
 	text-transform: uppercase; 
 	color: #444444;
 	margin:3% 0;
@@ -402,111 +401,4 @@ footer{
 	clear: left;
 	text-align: center;
 	padding: 2em;
-}
-
-/* Dashboard Styles */
-.container {
-    float:left;
-    width:100%;
-    border-width: 1px;
-}
-.col1 {
-    float:left;
-    width:24%;
-    background:black;
-}
-.col2 {
-    float:left;
-    width:24%;
-    background:#960000;
-}
-.col3 {
-    float:left;
-    width:24%;
-    background:#124A00;
-}
-.col4 {
-    float:left;
-    width:24%;
-    background:#B58109;
-}
-
-.dashboard-stat {
-  display: block;
-  overflow: hidden;
-  margin:0.5%;
-  height: 8em;
-  opacity:0.8;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
-}
-.dashboard-stat:before, .dashboard-stat:after {
-  content: " ";
-  display: table;
-}
-.dashboard-stat:after {
-  clear: both;
-}
-
-.dashboard-stat .visual {
-  width: 3em;
-  height: 3em;
-  display: block;
-  float: left;
-  padding-top: 10%;
-  font-size: 2em;
-  line-height: 2em;
-}
-.dashboard-stat .visual > i {
-  margin-left: 0;
-  font-size: 3em;
-  color: #FFFFFF;
-  opacity: 0.15;
-}
-
-.dashboard-stat .details {
-	text-align: right;
-	font-size: 2.5em;
-	color: #dddddd;
-	margin-right:0.2em;
-}
-
-.dashboard-stat .details .desc {
-	font-size: 0.5em;
-}
-
-.dashboard-stat .more {
-  clear: both;
-  display: block;
-  padding: 6px 10px;
-  position: relative;
-  text-transform: uppercase;
-  font-weight: 300;
-  font-size: 1em;
-  opacity: 0.7;
-  background-color: rgba(0,0,0,0.5);
-  text-align: right;
-}
-
-.dashboard-stat .more > i {
-	font-size: 1.5em;
-}
-
-.bigportlet {
-  background-color: #fff;
-  width: auto;
-  height: 40em;
-  margin: 1em;
-}
-.portlet {
-  background-color: #fff;
-  width: 49%;
-  float: left;
-  height: 45em;
-  padding: 1em;
-  overflow: hidden;
- border-width: 1px;
 }

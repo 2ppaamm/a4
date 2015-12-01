@@ -66,14 +66,15 @@ $(document).ready(function(){
 	$( "article img" ).hover(
 		function() {
 	  		$( this ).css({
-	  			opacity:'0.2'
-	  		})
+	  			opacity:'0.2' });
+	  		$(this).animate({
+          		"width": "+="+ 100 }, "slow");
 	  	}, function() {
 	  		$(this).css({
-	  			opacity:'1'
-	  		})
-	  	}
-	);
+	  			opacity:'1' });
+			$(this).animate({
+          		"width": "-="+ 100 }, "slow");
+	});
 
 	// Set feature articles in different color
 	$( "article:first" ).css({ 
