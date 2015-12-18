@@ -1,0 +1,48 @@
+html {
+	box-sizing:border-box;
+}
+*,*:before, *:after {
+	box-sizing:inherit;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+section {
+       top: 1em; /* Header Height */
+       bottom: 0.5em; /* Footer Height */
+       width: 100%;
+}
+
+.question {
+	font-size: 2em;
+	text-align: center;
+}
+
+[id^='selectable'] .ui-selecting { background: #FECA40; }
+[id^='selectable'] .ui-selected { background: #F39814; color: white; }
+[id^='selectable'] { list-style-type: none; margin: 0; padding: 0; width: 100%; border-color: black }
+[id^='selectable'] li { margin: 0.1em; padding: 0.1em; font-size: 0.5em; height: 1.2em; }
+
+#leveltab .ui-state-highlight {
+	text-align: center;
+}
+
+#leveltab .ui-block-a, #leveltab .ui-block-c {
+	width: 10%;
+}
+
+#leveltab .ui-block-b {
+	width: 80%;
+}
+
+.ui-tabs-vertical .ui-tabs-nav { padding: .2em .1em .2em .2em; float: left; }
+.ui-tabs-vertical .ui-tabs-nav li { clear: left; width: 100%; border-bottom-width: 1px !important; border-right-width: 0 !important; margin: 0 -1px .2em 0; }
+.ui-tabs-vertical .ui-tabs-nav li a { display:block; }
+.ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active { padding-bottom: 0; padding-right: .1em; border-right-width: 1px; }
+.ui-tabs-vertical .ui-tabs-panel { padding: 1em; float: right;}
+
+select {
+	width: 200px;
+}

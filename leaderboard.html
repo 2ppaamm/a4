@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<title>All Gifted LeaderBoard</title>
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+    <link rel="stylesheet" href="themes/allgifted.min.css" />
+	<link href="css/jquery-ui.css" rel="stylesheet">
+    <link href="css/leaderboard.css" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:600|Montserrat|Ubuntu' rel='stylesheet' type='text/css'>
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+	<div id="tabs">
+		<ul>
+			<li><a href="#leader">LeaderBoard</a></li>
+			<li><a href="#class">Class Challenges</a></li>
+			<li><a href="mathquiz.html">Personal Challenges</a></li>
+		</ul>
+		<section id="leader">
+			<table data-role="table" data-mode="columntoggle" class="ui-responsive" id="myTable">
+			  <thead>
+			    <tr>
+			      <th data-priority="1">#</th>
+			      <th data-priority="2">Name</th>
+			      <th data-priority="3">Country/School</th>
+			      <th data-priority="4">Level</th>
+			      <th data-priority="5">Badges</th>
+			      <th data-priority="6">Playtime(H)</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <tr>
+			      <td>1</td>
+			      <td>Christopher</td>
+			      <td>Australia/BBC</td>
+			      <td>127</td>
+			      <td>21</td>
+			      <td>238</td>
+			    </tr>
+			    <tr>
+			      <td>2</td>
+			      <td>Benjamin</td>
+			      <td>Australia/BBC</td>
+			      <td>120</td>
+			      <td>29</td>
+			      <td>214</td>
+			    </tr>
+			    <tr>
+			      <td>3</td>
+			      <td>Christopher</td>
+			      <td>Australia/BBC</td>
+			      <td>127</td>
+			      <td>21</td>
+			      <td>238</td>
+			    </tr>
+			    <tr>
+			      <td>4</td>
+			      <td>Christopher</td>
+			      <td>Australia/BBC</td>
+			      <td>127</td>
+			      <td>21</td>
+			      <td>238</td>
+			    </tr>
+			    <tr>
+			      <td>5</td>
+			      <td>Christopher</td>
+			      <td>Australia/BBC</td>
+			      <td>127</td>
+			      <td>21</td>
+			      <td>238</td>
+			    </tr>
+			    <tr>
+			      <td>6</td>
+			      <td>Christopher</td>
+			      <td>Australia/BBC</td>
+			      <td>127</td>
+			      <td>21</td>
+			      <td>238</td>
+			    </tr>
+			    <tr>
+			      <td>7</td>
+			      <td>Christopher</td>
+			      <td>Australia/BBC</td>
+			      <td>127</td>
+			      <td>21</td>
+			      <td>238</td>
+			    </tr>
+			    <tr>
+			      <td>8</td>
+			      <td>Christopher</td>
+			      <td>Australia/BBC</td>
+			      <td>127</td>
+			      <td>21</td>
+			      <td>238</td>
+			    </tr>
+			    <tr>
+			      <td>9</td>
+			      <td>Christopher</td>
+			      <td>Australia/BBC</td>
+			      <td>127</td>
+			      <td>21</td>
+			      <td>238</td>
+			    </tr>
+			    <tr>
+			      <td>10</td>
+			      <td>Christopher</td>
+			      <td>Australia/BBC</td>
+			      <td>127</td>
+			      <td>21</td>
+			      <td>238</td>
+			    </tr>
+			  </tbody>
+			</table>
+		</section>
+		<section id="class">
+			<div id="leveltab">
+				<ul>
+					<li><a href="#level1">Level 1</a></li>
+					<li><a href="#level2">Level 2</a></li>
+					<li><a href="#level3">Level 3</a></li>
+	  			</ul>
+	  			<div class="ui-state-highlight">You can only submit your answer once. It cannot be changed once you hit.
+
+				<div id="select-result"></div></div>
+	  			<div id="level1">
+					<div class="ui-grid-b">
+						<div id="health" class="ui-block-a"></div>
+						<div class="ui-block-b question">
+							<h1>Solve the following simultaneous equations.<br> 
+								3x - 2y = 10, <br>
+								x + 3y = 7 </h1>
+							<hr>
+							<h2>
+								<ol id="selectable1">
+									<li class="ui-state-default">x = 4, y = 11</li>
+									<li class="ui-state-default">x = 11, y = 4</li>
+								  	<li class="ui-state-default">x = 4, y = 14</li>
+								  	<li class="ui-state-default">y = 11, x = 11</li>
+								</ol>
+							</h2>
+					</div>
+					<div id="points" class="ui-block-c"></div>
+					</div>
+				</div><!-- /grid-b -->
+	  			<div id="level2">
+					<div class="ui-grid-b">
+						<div id="health2" class="ui-block-a"></div>
+						<div class="ui-block-b question">
+							<h1>Solve the following simultaneous equations.<br> 
+								7x - 12y = 10, <br>
+								8x + 23y = 7 </h1>
+							<hr>
+							<h2>
+								<ol id="selectable2">
+									<li class="ui-state-default">x = 4, y = 11</li>
+									<li class="ui-state-default">x = 11, y = 4</li>
+								  	<li class="ui-state-default">x = 4, y = 14</li>
+								  	<li class="ui-state-default">y = 11, x = 11</li>
+								</ol>
+							</h2>
+						</div>
+						<div id="points2" class="ui-block-c"></div>
+	  				</div>
+  				</div>
+	  			<div id="level3">
+					<div class="ui-grid-b">
+						<div id="health3" class="ui-block-a"></div>
+						<div class="ui-block-b question">
+							<h1>Solve the following simultaneous equations.<br> 
+								11x - 12y = 10, <br>
+								54x + 23y = 7 </h1>
+							<hr>
+							<h2>
+								<ol id="selectable3">
+									<li class="ui-state-default">x = 4, y = 11</li>
+									<li class="ui-state-default">x = 11, y = 4</li>
+								  	<li class="ui-state-default">x = 4, y = 14</li>
+								  	<li class="ui-state-default">y = 11, x = 11</li>
+								</ol>
+							</h2>
+						</div>
+						<div id="points3" class="ui-block-c"></div>
+	  				</div>
+	  			</div>
+			</div>
+		</section>
+	</div>
+</body>
+
+
+<script src="external/jquery/jquery.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="fusioncharts/fusioncharts.js"></script>
+<script type="text/javascript" src="fusioncharts/js/themes/fusioncharts.theme.fint.js"></script>
+<script src="js/studentchart.js"></script>
+<script src="js/leaderboard.js"></script>
+</body>
+</html>

@@ -5,32 +5,147 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Teacher's Page</title>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="themes/allgifted.min.css" />
     <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
-    <link rel="stylesheet" href="themes/allgifted.min.css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
-    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <script type="text/javascript" src="fusioncharts/fusioncharts.js"></script>
-    <script type="text/javascript" src="fusioncharts/js/themes/fusioncharts.theme.fint.js"></script>
     <link rel="stylesheet" href="css/dashboard.css">
 </head>
 
 <body>
-    <section data-role="page" id="home">
-    	<header data-role="header" data-theme="b" data-position="fixed">
-    		<h1>Teaching Dashboard</h1>
-        	<nav data-role="navbar" data-position="fixed">
+    <section data-role="page" id="home" data-theme="c">
+      <header data-role="header" data-position="fixed">
+        <h1>Teaching Dashboard</h1>
+          <nav data-role="navbar" data-position="fixed">
+              <ul>
+                <li><a href="#home" class="ui-btn-active">Overall Performance</a></li>
+                <li><a href="#track">Result by Track</a></li>
+                <li><a href="#class">Class Results</a></li>
+                <li><a href="#student">Student Radar</a></li>
+                <li><a href="#coursemgt">Course Management</a></li>                    
+              </ul>
+            </nav>
+      </header>
+      <main data-role="main" class="ui-content">
+            <div class="ui-corner-all">
+                <div class="ui-bar ui-bar-a">
+                    <label for="select-choice-0" class="select">Course</label>
+                    <select name="select-choice-0" id="select-choice-0" data-native-menu="false" multiple="multiple">
+                      <option value="B">Mathematics B</option>
+                      <option value="C">Mathematics C</option>
+                      <option value="1">Year 1 Math</option>
+                      <option value="2">Year 2 Math</option>
+                      <option value="3">Year 3 Math</option>
+                      <option value="4">Year 4 Math</option>
+                      <option value="5">Year 5 Math</option>
+                      <option value="6">Year 6 Math</option>
+                      <option value="7">Year 7 Math</option>
+                      <option value="8">Year 8 Math</option>
+                      <option value="9">Year 9 Math</option>
+                      <option value="10">Year 10 Math</option>
+                    </select>                
+                </div>
+                <div class="ui-grid-c ui-body ui-responsive" id="overall">
+                    <div class="ui-block-a">
+                        <div class="ui-grid-solo overall total ui-btn">
+                            <div class="visual">
+                                <i class="fa fa-line-chart"></i>
+                            </div>
+                            <div class="details">
+                                <div class="number">
+                                     120
+                                </div>
+                                <div class="desc">
+                                     Total
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- block-a -->
+                    <div class="ui-block-b">
+                        <div class="ui-grid-solo overall belowtarget ui-btn">
+                            <div class="visual">
+                                <i class="fa fa-exclamation"></i>
+                            </div>
+                            <div class="details">
+                                <div class="number">
+                                     21
+                                </div>
+                                <div class="desc">
+                                     Underperform
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- block-b -->
+                    <div class="ui-block-c">
+                        <div class="ui-grid-solo overall ontarget  ui-btn">
+                            <div class="visual">
+                                <i class="fa fa-check"></i>
+                                </div>
+                                <div class="desc">
+                            </div>
+                            <div class="details">
+                                <div class="number">
+                                    89
+                                </div>
+                                <div class="desc">
+                                     On Target
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- block-c -->
+                    <div class="ui-block-d">
+                        <div class="ui-grid-solo overall overtarget ui-btn">
+                            <div class="visual">
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <div class="details">
+                                <div class="number">
+                                     10
+                                </div>
+                                <div class="desc">
+                                     Excel
+                                </div>
+                            </div>
+                        </div> 
+                    </div> <!-- block-d -->
+                </div><!-- /grid-c -->
+            </div>
+
+            <div class="ui-corner-all">
+                <div class="ui-bar ui-bar-c">
+                    <h3>Achievement by All Students</h3>
+                </div>
+
+                <div class="ui-body">
+                    <div id="detail-overall-land" style="display:none"></div>
+                    <div id="detail-overall-port" style="display:none"></div>
+                    <div id="detail-under-land" style="display:none"></div>
+                    <div id="detail-on-land"  style="display:none"></div>
+                    <div id="detail-over-land"  style="display:none"></div>
+                </div> <!ui-body>
+            </div> <!-- Pagelet -->
+
+      </main>
+        <footer data-role="footer" data-position="fixed" data-theme="b">
+            <p>&copy; 2015 All Gifted LLC. All rights reserved.</p>
+        </footer>
+    </section>
+
+    <section data-role="page" id="track" data-theme="c">
+      <header data-role="header" data-position="fixed">
+        <h1>Teaching Dashboard</h1>
+          <nav data-role="navbar" data-position="fixed">
                 <ul>
-                    <li><a href="#home class="ui-btn-active"">Overall Performance</a></li>
+                    <li><a href="#home">Overall Performance</a></li>
+                    <li><a href="#track" class="ui-btn-active">Result by Track</a></li>
                     <li><a href="#class">Class Results</a></li>
                     <li><a href="#student">Student Radar</a></li>
                     <li><a href="#coursemgt">Course Management</a></li>                    
                     <!--li><a href="#test">Tests</a></li-->
                 </ul>
             </nav>
-    	</header>
-    	<main data-role="main" class="ui-content">
+      </header>
+      <main data-role="main" class="ui-content">
             <div class="ui-corner-all">
                 <div class="ui-bar ui-bar-a">
                     <label for="select-choice-0" class="select">Course</label>
@@ -49,70 +164,6 @@
                       <option value="10">Year 10 Math</option>
                     </select>                
                 </div>
-                <div class="ui-grid-c ui-body ui-body-a ui-responsive" id="overall">
-                    <div class="ui-block-a">
-                        <div class="ui-grid-solo overall total">
-                            <div class="visual">
-                                <i class="fa fa-line-chart"></i>
-                            </div>
-                            <div class="details">
-                                <div class="number">
-                                     120
-                                </div>
-                                <div class="desc">
-                                     Total
-                                </div>
-                            </div>
-                        </div>
-                    </div> <!-- block-a -->
-                    <div class="ui-block-b">
-                        <div class="ui-grid-solo overall belowtarget">
-                            <div class="visual">
-                                <i class="fa fa-exclamation"></i>
-                            </div>
-                            <div class="details">
-                                <div class="number">
-                                     21
-                                </div>
-                                <div class="desc">
-                                     Below Target
-                                </div>
-                            </div>
-                        </div>
-                    </div> <!-- block-b -->
-                    <div class="ui-block-c">
-                        <div class="ui-grid-solo overall ontarget">
-                            <div class="visual">
-                                <i class="fa fa-check"></i>
-                                </div>
-                                <div class="desc">
-                            </div>
-                            <div class="details">
-                                <div class="number">
-                                    89
-                                </div>
-                                <div class="desc">
-                                     On Target
-                                </div>
-                            </div>
-                        </div>
-                    </div> <!-- block-c -->
-                    <div class="ui-block-d">
-                        <div class="ui-grid-solo overall abovetarget">
-                            <div class="visual">
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <div class="details">
-                                <div class="number">
-                                     10
-                                </div>
-                                <div class="desc">
-                                     Excel
-                                </div>
-                            </div>
-                        </div> 
-                    </div> <!-- block-d -->
-                </div><!-- /grid-c -->
             </div>
 
             <div class="ui-corner-all">
@@ -121,29 +172,27 @@
                 </div>
 
                 <div class="ui-body">
-                    <div id="track-range">Student Achievement by Track
-                    <!--div class="ui-block-a" id="student-range">Student Overall Learning History
-                    </div-->
+                    <div id="track-range">
                     </div>
-                </div> <!--grid-a-->
+                </div> <!-- ui-body-->
             </div> <!-- Pagelet -->
 
-    	</main>
-        <footer data-role="footer" data-theme="b" data-position="fixed">
+      </main>
+        <footer data-role="footer" data-position="fixed">
             <p>&copy; 2015 All Gifted LLC. All rights reserved.</p>
         </footer>
     </section>
 
-    <section data-role="page" id="class">
-        <header data-role="header" data-theme="b" data-position="fixed">
+    <section data-role="page" id="class" data-theme="c">
+        <header data-role="header" data-position="fixed">
             <h1>Performance by Class</h1>
             <nav data-role="navbar" data-position="fixed">
                 <ul>
                     <li><a href="#home">Overall Performance</a></li>
+                    <li><a href="#track">Result by Track</a></li>
                     <li><a href="#class" class="ui-btn-active">Class Results</a></li>
                     <li><a href="#student">Student Radar</a></li>
-                    <li><a href="#coursemgt">Course Management</a></li>                    
-                    <li><a href="#test">Tests</a></li>
+                    <li><a href="#coursemgt">Course Management</a></li> 
                 </ul>
             </nav>
         </header>
@@ -162,17 +211,18 @@
                 </div> <!--grid-a-->
             </div> <!--pagelet -->
         </main>
-        <footer data-role="footer" data-theme="b" data-position="fixed">
+        <footer data-role="footer" data-position="fixed">
             <p>&copy; 2015 All Gifted LLC. All rights reserved.</p>
         </footer>
     </section>
 
-    <section data-role="page" id="student">
-        <header data-role="header" data-theme="b" data-position="fixed">
+    <section data-role="page" id="student" data-theme="c">
+        <header data-role="header" data-position="fixed">
             <h1>Student Performance</h1>
             <nav data-role="navbar" data-position="fixed">
                 <ul>
                     <li><a href="#home">Overall Performance</a></li>
+                    <li><a href="#track">Result by Track</a></li>
                     <li><a href="#class">Class Results</a></li>
                     <li><a href="#student" class="ui-btn-active">Student Radar</a></li>
                     <li><a href="#coursemgt">Course Management</a></li>                    
@@ -189,7 +239,7 @@
                     </div> <!-- Search input widget -->
                 </div>
                 <div class="ui-body ui-body-a ui-grid-a">
-                    <div class="ui-block-a">
+                    <div class="ui-block-a"  id="radar">
                         <div id="trackradar">Radar Track</div>
                     </div> <!--block-a-->
                     <div class="ui-block-b">
@@ -198,17 +248,18 @@
                 </div><!--grid-a-->
             </div> <!--pagelet -->
         </main>
-        <footer data-role="footer" data-theme="b" data-position="fixed">
+        <footer data-role="footer" data-position="fixed">
             <p>&copy; 2015 All Gifted LLC. All rights reserved.</p>
         </footer>
     </section>
 
-    <section data-role="page" id="coursemgt">
-        <header data-role="header" data-theme="b" data-position="fixed">
+    <section data-role="page" id="coursemgt" data-theme="c">
+        <header data-role="header" data-position="fixed">
             <h1>Course Managment</h1>
             <nav data-role="navbar" data-position="fixed">
                 <ul>
                     <li><a href="#home">Overall Performance</a></li>
+                    <li><a href="#track">Result by Track</a></li>
                     <li><a href="#class">Class Results</a></li>
                     <li><a href="#student">Student Radar</a></li>
                     <li><a href="#coursemgt" class="ui-btn-active">Course Management</a></li> 
@@ -220,74 +271,163 @@
         <main data-role="main" class="ui-content ui-grid-a">
             <div class="ui-corner-all">
                 <div class="ui-bar ui-bar-a">
-                    <div class="ui-grid-a">
-                        <div class="ui-block-a">
-                            <label for="select-choice-0" class="select">Course</label>
-                            <select name="select-choice-0" id="select-choice-0">
-                              <option value="B">Mathematics B</option>
-                              <option value="C">Mathematics C</option>
-                              <option value="1">Year 1 Math</option>
-                              <option value="2">Year 2 Math</option>
-                              <option value="3">Year 3 Math</option>
-                              <option value="4">Year 4 Math</option>
-                              <option value="5">Year 5 Math</option>
-                              <option value="6">Year 6 Math</option>
-                              <option value="7">Year 7 Math</option>
-                              <option value="8">Year 8 Math</option>
-                              <option value="9">Year 9 Math</option>
-                              <option value="10">Year 10 Math</option>
-                            </select>                
-                        </div>
-                    <div class="ui-block-b">
-                        <label for="select-choice-1" class="select">Period</label>
-                        <select name="select-choice-1" id="select-choice-1">
-                          <option value="B">Semester 1, 2015</option>
-                          <option value="C">Semester 2, 2015</option>
-                          <option value="1">Semester 1, 2016</option>
-                          <option value="2">Semester 2, 2016</option>
-                          <option value="3">Full year, 2015</option>
-                          <option value="3">Full year, 2016</option>
-                        </select>                
-                    </div>
-                </div><!-- /grid-a -->
+                <form action="">
+                  <fieldset data-role="controlgroup" data-type="horizontal">
+                    <legend>Course to manage</legend>
+                    <label for="course">
+                      -- Select Course --
+                    </label>
+                      <select name="course" id="coursemgt1">                              
+                        <option value="B">Mathematics B</option>
+                        <option value="C">Mathematics C</option>
+                        <option value="1">Year 1 Math</option>
+                        <option value="2">Year 2 Math</option>
+                        <option value="3">Year 3 Math</option>
+                        <option value="4">Year 4 Math</option>
+                        <option value="5">Year 5 Math</option>
+                        <option value="6">Year 6 Math</option>
+                        <option value="7">Year 7 Math</option>
+                        <option value="8">Year 8 Math</option>
+                        <option value="9">Year 9 Math</option>
+                        <option value="10">Year 10 Math</option>
+                      </select>
+                    <label for="semester">
+                      -- Select Semester --
+                    </label>
+                      <select name="course" id="coursemgt1">                              
+                        <option value="B">Semester 1, 2015</option>
+                        <option value="C">Semester 2, 2015</option>
+                        <option value="1">Semester 1, 2016</option>
+                        <option value="2">Semester 2, 2016</option>
+                        <option value="3">Full year, 2015</option>
+                        <option value="3">Full year, 2016</option>
+                      </select>
+                    <label for="class">
+                      -- Select Class --
+                    </label>
+                      <select name="class" id="classmgt">                              
+                        <option value="11A">11A</option>
+                        <option value="11B">11B</option>
+                        <option value="11C">11C</option>
+                      </select>
+                  <button type="submit" class="ui-btn">Show course breakdown</button>
+                  </fieldset>
+                </form>
             </div>       
             <div class="ui-body">
                 <div data-role="main" class="ui-content">
                     <table data-role="table" data-mode="columntoggle" class="ui-responsive" id="courseconfig">
                       <thead>
                         <tr>
-                          <th data-priority="5"></th>
+                          <th data-priority="6"><a href="#" id="addSkillbtn" class="ui-btn ui-icon-plus ui-btn-icon-notext"></a></th>
                           <th>Track</th>
-                          <th data-priority="1">Description</th>
+                          <th data-priority="1">Skills</th>
                           <th data-priority="2">Date From</th>
                           <th data-priority="3">Date To</th>
                           <th data-priority="4">Target Score</th>
+                          <th data-priority="5">Tested?</th>
                         </tr>
                       </thead>
                       <tbody>
+                        <tr id="addSkill">
+                        <form action="">
+                          <td>
+                            <input type="number" name="arrangment" pattern"[0-9]*" id="arrangment" value="" placeholder="Position">
+                          </td>
+                          <td>
+                            <input name="topic" list="topic" placeholder="Add new Topic or select one">
+                            <datalist id="topic" name="topic">
+                              <label>Or select from the list</label>
+                              <select name="filling">
+                                <option value="Algebra">Algebra</option>
+                                <option value="Arithmetic">Arithmetic</option>
+                                <option value="∑-notation">∑-notation</option>
+                                <option value="Straight Lines">Straight Lines</option>
+                                <option value="Simultaneous equations">Simultaneous equations</option>
+                              </select>
+                            </datalist>
+                          </td>
+                          <td>
+                            <input type="text" name="skill" id="skill" value="" placeholder="New Skill Name">
+                          </td>
+                          <td>
+                            <input type="date" data-role="date" data-inline="true">
+                          </td>
+                          <td>
+                            <input type="date" data-role="date" data-inline="true">
+                          </td>
+                          <td>
+                            <select name="targetlevel" id="targetlevel" placeholder="Target Level">
+                              <option value="900">900</option>
+                              <option value="1000">1000</option>
+                              <option value="1100">1100</option>
+                              <option value="1200">1200</option>
+                              <option value="1300">1300</option>
+                              <option value="1900">Above 1300</option>
+                            </select>
+                          </td>
+                          <td>
+                            <fieldset data-role="controlgroup" data-type="horizontal">
+                              <input type="radio" name="tested" id="tested" value="on">
+                              <label for="tested">Yes</label>
+                              <input type="radio" name="tested" id="nottested" value="off" checked="">
+                              <label for="nottested"><em>No</em></label>
+                            </fieldset>
+                            <button class="ui-btn ui-mini" type="submit">Submit</button>
+                          </td>                          
+                        </tr>
+                        </form>
                         <tr>
-                          <td>1</td>
-                          <td>Arithmetic</td>
-                          <td>Arithmetic</td>
-                          <td>02/27</td>
-                          <td>03/14</td>
-                          <td>1300</td>
+                          <td><p>1</p></td>
+                          <td><p>Arithmetic</p></td>
+                          <td>
+                            <div data-role="collapsible" data-collapsed="true">
+                              <h4>Arithmetic Skills</h4>
+                              <ul data-role = "listview">
+                                <li><a href="#">Thinking about Maths</a></li>
+                                <li><a href="#">Types of numbers</a></li>
+                                <li><a href="#">Absolute Values</a></li>
+                                <li><a href="#">Simple mathematical operations</a></li>
+                                <li><a href="#">Order of operations</a></li>
+                                <li><a href="#">Fractions</a></li>
+                                <li><a href="#">Introduction to exponentiation</a></li>
+                                <li><a href="#">Square roots</a></li>
+                              </ul> 
+                            </div>
+                          </td>
+                          <td><p>02/27</p></td>
+                          <td><p>03/14</p></td>
+                          <td><p>1300</p></td>
                         </tr>
                         <tr>
-                          <td>2</td>
-                          <td>Algebra</td>
-                          <td>Arithmetic</td>
-                          <td>03/14</td>
-                          <td>03/31</td>
-                          <td>1300</td>
+                          <td><p>2</p></td>
+                          <td><p>Algebra</p></td>
+                          <td>
+                            <div data-role="collapsible" data-collapsed="true">
+                              <h4>Algebra Skills</h4>
+                              <ul data-role = "listview">
+                                <li><a href="#">Introduction to algebra</a></li>
+                                <li><a href="#">Expanding and factorizing</a></li>
+                                <li><a href="#">Equation and Formulae</a></li>
+                                      <li><a href="#">Solving absolute values</a></li>
+                                <li><a href="#">Intervals on the real line</a></li>
+                                <li><a href="#">Solving Inequalities</a></li>
+                                <li><a href="#">Square roots</a></li>
+                                <li><a href="#">Power and Exponentials</a></li>
+                              </ul> 
+                            </div>
+                          </td>
+                          <td><p>03/14</p></td>
+                          <td><p>03/31</p></td>
+                          <td><p>1300</p></td>
                         </tr>
                         <tr>
-                          <td>3</td>
-                          <td>∑-notation</td>
-                          <td>∑-notation</td>
-                          <td>04/01</td>
-                          <td>04/14</td>
-                          <td>1300</td>
+                          <td><p>3</p></td>
+                          <td><p>∑-notation</p></td>
+                          <td><p>∑-notation</p></td>
+                          <td><p>04/01</p></td>
+                          <td><p>04/14</p></td>
+                          <td><p>1300</p></td>
                         </tr>
                         <tr>
                           <td>4</td>
@@ -374,77 +514,16 @@
                 </div>
             </div>
         </main>
-        <footer data-role="footer" data-theme="b" data-position="fixed">
-            <p>&copy; 2015 All Gifted LLC. All rights reserved.</p>
-        </footer>
-    </section>
-
-    <section data-role="page" id="test">
-        <header data-role="header" data-theme="b" data-position="fixed">
-            <h1>Test and Quiz Management</h1>
-            <nav data-role="navbar" data-position="fixed">
-                <ul>
-                    <li><a href="#home">Overall Performance</a></li>
-                    <li><a href="#class">Class Results</a></li>
-                    <li><a href="#student">Student Radar</a></li>
-                    <li><a href="#coursemgt">Course Management</a></li> 
-                    <!--li><a href="#test" class="ui-btn-active">Tests</a></li-->
-                    
-                </ul>
-            </nav>
-        </header>
-        <main data-role="main" class="ui-content ui-grid-a">
-          <div data-role="header">
-            <h1>Add a Test or Quiz</h1>
-          </div>
-          <div role="main" class="ui-content">
-            <table data-role="table" id="my-table" data-mode="reflow">
-              <thead>
-                <tr>
-                  <th>Course</th>
-                  <th>Class</th>
-                  <th>Test Date</th>
-                  <th>Topic</th>
-                  <th>Skills</th>
-                  <th>Difficulty Level</th>
-                  <th>Total Number of question</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                    <th>
-                        <input type="date" id="date" name="date">
-                    </th>
-                    <td>
-                        <select name="topic" id="topic" multiple="multiple" data-native-menu="false">
-                                <option value="B">Mathematics B</option>
-                                <option value="C">Mathematics C</option>
-                                <option value="1">Year 1 Math</option>
-                                <option value="2">Year 2 Math</option>
-                                <option value="3">Year 3 Math</option>
-                                <option value="4">Year 4 Math</option>
-                                <option value="5">Year 5 Math</option>
-                                <option value="6">Year 6 Math</option>
-                                <option value="7">Year 7 Math</option>
-                                <option value="8">Year 8 Math</option>
-                                <option value="9">Year 9 Math</option>
-                                <option value="10">Year 10 Math</option>
-                            </select>                
-                    </td>
-                    <td>1941</td>
-                  <td>100%</td>
-                  <td>74</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </main>
-        <footer data-role="footer" data-theme="b" data-position="fixed">
+        <footer data-role="footer" data-position="fixed">
             <p>&copy; 2015 All Gifted LLC. All rights reserved.</p>
         </footer>
     </section>
 
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="js/main1.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="fusioncharts/fusioncharts.js"></script>
+    <script type="text/javascript" src="fusioncharts/js/themes/fusioncharts.theme.fint.js"></script>
+    <script src="js/chart.js"></script>
+    <script src="js/dashboard.js"></script>
 </body>
 </html>

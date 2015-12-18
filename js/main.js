@@ -38,7 +38,7 @@ $(document).ready(function(){
 			});
 			$(this).siblings(".error").html(' ');
 		}
-		window.open("dashboard.html");
+		window.open("teach.html");
 //		window.location.href = 'dashboard.html';
 	}); //end submit
 
